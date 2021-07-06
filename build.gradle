@@ -11,10 +11,17 @@ repositories {
 
 javafx {
     version = "16"
-    modules = [ 'javafx.controls' ]
+    modules = [ 'javafx.controls', 'javafx.fxml']
 }
 
-mainClassName = ''
+    mainClassName = 'ucf.assignments.main'
+
 test {
     useJUnitPlatform()
+}
+
+dependencies {
+    implementation 'junit:junit:4.13.1'
+    implementation 'org.junit.jupiter:junit-jupiter:5.7.0'
+    implementation 'com.opencsv:opencsv:5.3'
 }
