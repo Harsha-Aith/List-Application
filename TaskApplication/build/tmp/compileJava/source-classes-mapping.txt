@@ -1,0 +1,12 @@
+ucf/assignments/ListModel.java
+ ucf.assignments.ListModel
+ucf/assignments/Task.java
+ ucf.assignments.Task
+ucf/assignments/ListManager.java
+ ucf.assignments.ListManager
+ucf/assignments/ManageFiles.java
+ ucf.assignments.ManageFiles
+ucf/assignments/main.java
+ ucf.assignments.main
+ucf/assignments/ListController.java
+ ucf.assignments.ListController

@@ -1,0 +1,77 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ListAPP{
+main()
+start()
+}
+
+class ListController
+{
+model: ListModel
+// GUI: Event Handlers
++ public addListClicked()
++ public deleteListClicked()
++ public editListClicked()
++ public addItemClicked()
++ public deleteItemClicked()
++ public listDropdownClicked()
++ public importListClicked()
++ public exportListClicked()
++ public editDescriptionClicked()
++ public editDueDateClicked()
++ public editCompletedClicked()
+
+}
+
+class ListModel{
++public addList();
++ public removeList();
++ public editTitle();
++toString();
+}
+
+class ListManager
+{
+ - list: ObservableList<Task>
+ - view: ListView<>
++ public addItem();
++ public deleteItem();
++public modifyItem();
++public editDescription();
++public editDueDate();
++public markComplete();
++public displayAll();
++public displayCompleted();
++public displayIncomplete();
+
+
+}
+ListAPP-- ListModel
+ListController -- ListModel
+ListModel -- ListManager
+ListManager*-- Task
+
+class ManageFiles
+{
++public importList(): String
++public importMultipleLists(): String
++public exportList(): String
++public exportMultipleList: String
+
+}
+class Task{
+    -description: String
+    -dueDate: Date
+    -isCompleted: Boolean
+
+    +public setDescription(String): void
+    +public setDueDate(String): void
+    +getDescription(): String
+    +getDueDate(): String
+    +getIsCompleted(): Boolean
+    +setIsCompleted()
+    +toString(): String
+}
+
+@enduml

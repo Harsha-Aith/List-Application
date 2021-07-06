@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ListController">
+   <children>
+      <TableView fx:id="itemTable" layoutX="-5.0" layoutY="86.0" onSort="#sortItems" prefHeight="237.0" prefWidth="607.0">
+         <columns>
+            <TableColumn fx:id="descriptionCol" onEditCommit="#editDescription" prefWidth="308.0" text="Description" />
+            <TableColumn fx:id="dateCol" minWidth="0.0" onEditCommit="#editDueDate" prefWidth="146.5" text="Due Date" />
+            <TableColumn fx:id="completed" onEditCommit="#editCompleted" prefWidth="190.5" text="Completed?" />
+         </columns>
+      </TableView>
+      <TextField fx:id="description" layoutX="10.0" layoutY="344.0" />
+      <CheckBox fx:id="isCompleted" layoutX="396.0" layoutY="348.0" mnemonicParsing="false" text="Completed" />
+      <DatePicker fx:id="dueDate" layoutX="183.0" layoutY="344.0" />
+      <Button fx:id="addItemButton" layoutX="515.0" layoutY="365.0" mnemonicParsing="false" onAction="#addItemClicked" text="Add" />
+      <Button fx:id="deleteItemButton" layoutX="515.0" layoutY="336.0" mnemonicParsing="false" onAction="#deleteItemClicked" text="Delete" />
+      <ComboBox fx:id="listDropdown" layoutX="207.0" layoutY="37.0" onAction="#listDropdownClicked" prefWidth="150.0" promptText="All Items" />
+   </children>
+</AnchorPane>
