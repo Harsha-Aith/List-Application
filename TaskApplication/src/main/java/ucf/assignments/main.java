@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 import java.awt.*;
 import java.io.IOException;
 
-public class ListAPP extends Application {
+public class main extends Application {
 
 
     public static void main(String[] args) {
